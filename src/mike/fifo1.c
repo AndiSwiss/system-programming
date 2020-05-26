@@ -5,7 +5,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include "libs/my_stdlib.c"
+#include "../libs/my_stdlib.c"
 
 /* ========================================
  * This program creates a named pipe (FIFO)

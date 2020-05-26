@@ -3,7 +3,7 @@
 #include <fcntl.h>           /* For O_* constants */
 #include <sys/stat.h>        /* For mode constants */
 #include <mqueue.h>
-#include "libs/my_stdlib.c"
+#include "../libs/my_stdlib.c"
 
 /* =============================
  * A program to create a message
