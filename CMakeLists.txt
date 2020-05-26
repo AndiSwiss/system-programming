@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(FHNW_syspr_system_programming
         src/andiswiss/out/hello
         src/andiswiss/hello.c
+        src/andiswiss/hello2.c
         src/andiswiss/makefile
         src/libs/my_stdlib.c
         src/mikenoethiger/libs/my_stdlib.c
@@ -38,4 +39,4 @@ add_executable(FHNW_syspr_system_programming
         src/mikenoethiger/time2.c
         src/mikenoethiger/time3.c
         src/mikenoethiger/time4.c
-        src/makefile)
+        src/makefile src/andiswiss/hello3.c)
