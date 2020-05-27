@@ -4,7 +4,7 @@ project(FHNW_syspr_system_programming)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(FHNW_syspr_system_programming
-        src/andiswiss/w00a_hello_world.c
+        src/andiswiss/w00_introduction/w00a_hello_world.c
         src/andiswiss/makefile
         src/libs/my_stdlib.c
         src/mikenoethiger/libs/my_stdlib.c
@@ -38,5 +38,9 @@ add_executable(FHNW_syspr_system_programming
         src/mikenoethiger/time3.c
         src/mikenoethiger/time4.c
         src/makefile
-        src/andiswiss/w01a_various_stuff.c
-        src/andiswiss/w01_hands_on/my_range.c src/andiswiss/w01_hands_on/my_args.c src/andiswiss/w01_hands_on/my_tree.c)
+        src/andiswiss/w01_first_steps_in_c/various_stuff.c
+        src/andiswiss/w01_first_steps_in_c/my_range.c
+        src/andiswiss/w01_first_steps_in_c/my_args.c
+        src/andiswiss/w01_first_steps_in_c/my_tree.c
+        src/andiswiss/w02_functions/swap.c
+        src/andiswiss/w02_functions/linked_example/linked_main.c src/andiswiss/w02_functions/linked_example/linked_f.c)
