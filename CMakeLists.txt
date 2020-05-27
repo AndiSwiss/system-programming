@@ -43,4 +43,14 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/w01_first_steps_in_c/my_args.c
         src/andiswiss/w01_first_steps_in_c/my_tree.c
         src/andiswiss/w02_functions/swap.c
-        src/andiswiss/w02_functions/linked_example/linked_main.c src/andiswiss/w02_functions/linked_example/linked_f.c src/andiswiss/w02_functions/my_struct_v2.c)
+        src/andiswiss/w02_functions/linked_example/linked_main.c
+        src/andiswiss/w02_functions/linked_example/linked_f.c
+        src/andiswiss/w02_functions/struct.c
+        src/andiswiss/w02_functions/my_struct_v2.c
+        src/andiswiss/w02_functions/scope.c
+        src/andiswiss/w02_functions/heater/heater.c
+        src/andiswiss/w02_functions/heater/home.c
+        src/andiswiss/w02_functions/garbage.c
+        src/andiswiss/w02_functions/map.c
+        src/andiswiss/w02_functions/max.c
+        src/andiswiss/w02_functions/error.c src/andiswiss/w02_functions/sys_t.c src/andiswiss/w02_functions/my_kilo.c)

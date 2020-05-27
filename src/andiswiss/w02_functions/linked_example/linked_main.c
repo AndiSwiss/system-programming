@@ -1,9 +1,6 @@
-//
-// Created by Andreas Ambühl on 27.05.20.
-//
 
 
-#include "linked_f.c"
+#include "./linked_f.c"
 
 //Function declaration if NOT using #include "linked_f.c"
 //void f(void);

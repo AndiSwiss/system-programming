@@ -1,7 +1,3 @@
-//
-// Created by Andreas Ambühl on 27.05.20.
-//
-
 #include <stdio.h>
 
 void swap(int *a, int *b) {
