@@ -144,3 +144,5 @@ fabric.properties
 .idea/**/markdown-navigator/
 
 # End of https://www.gitignore.io/api/c,clion
+/src/andiswiss/w03_file_io/fileB.txt
+/src/andiswiss/w03_file_io/my.log

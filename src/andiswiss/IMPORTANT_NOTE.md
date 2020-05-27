@@ -1,7 +1,7 @@
 # NOTE for Hands-On: 
 
 I uploaded the stuff for the hands-on in a separate folder
-to the syspr classroom.
+to the syspr classroom. (mostly the my_xxx.c - files)
 
 So, I edited it in here (in CLion - for a better learning experience and fast trying out of new 
 code and variants with the great Docker-Setup), but at the end, I copied

@@ -53,4 +53,4 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/w02_functions/garbage.c
         src/andiswiss/w02_functions/map.c
         src/andiswiss/w02_functions/max.c
-        src/andiswiss/w02_functions/error.c src/andiswiss/w02_functions/sys_t.c src/andiswiss/w02_functions/my_kilo.c)
+        src/andiswiss/w02_functions/error.c src/andiswiss/w02_functions/sys_t.c src/andiswiss/w02_functions/my_kilo.c src/andiswiss/w03_file_io/my_copy.c src/andiswiss/w03_file_io/lseek.c src/andiswiss/w03_file_io/my_logger.c)
