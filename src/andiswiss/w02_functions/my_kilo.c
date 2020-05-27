@@ -1,6 +1,5 @@
 //
 // Created by antirez -> origin: https://github.com/antirez/kilo/blob/master/kilo.c
-// Added some comment by AndiSwiss
 //
 
 /* Kilo -- A very simple editor in less than 1-kilo lines of code (as counted
