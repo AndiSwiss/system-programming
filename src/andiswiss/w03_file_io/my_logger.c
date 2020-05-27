@@ -15,14 +15,15 @@ int main(void) {
     char buffer[BUFFER_SIZE];
 
     // Open log file
-    logFd = open("./my.log", O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
+    logFd = open("./my.log", O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
     if (logFd == -1) {
         printf("ERROR with log-file: ./my.log  -> see next line for error-message:\n");
         perror("open");
         return -1;
     }
 
-
+    // Instead of just using the flag  | O_APPEND, you can also use lseek to reach the end of the file:
+    lseek(logFd, 0, SEEK_END);
 
     // Continuous logging (once every second):
     while (1) {
