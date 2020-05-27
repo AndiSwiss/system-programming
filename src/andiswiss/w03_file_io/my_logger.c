@@ -10,33 +10,43 @@
 
 
 int main(void) {
-
-    // Open source file
-    int uptimeFd = open("/proc/uptime", O_RDONLY);
-    if (uptimeFd == -1) {
-        printf("ERROR with opening /proc/uptime. -> See next line for error-message:\n");
-        perror("open");
-        return -1;
-    }
+    int logFd, uptimeFd;
+    ssize_t r;
+    char buffer[BUFFER_SIZE];
 
     // Open log file
-    int logFd = open("./my.log", O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
+    logFd = open("./my.log", O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
     if (logFd == -1) {
         printf("ERROR with log-file: ./my.log  -> see next line for error-message:\n");
         perror("open");
         return -1;
     }
 
-    // Actual copying of data:
-    char buffer[BUFFER_SIZE];
-    int r = read(uptimeFd, buffer, BUFFER_SIZE);
-    while (r > 0) {
-        write(logFd, buffer, r);
+
+
+    // Continuous logging (once every second):
+    while (1) {
+        // Open source file
+        uptimeFd = open("/proc/uptime", O_RDONLY);
+        if (uptimeFd == -1) {
+            printf("ERROR with opening /proc/uptime. -> See next line for error-message:\n");
+            perror("open");
+            return -1;
+        }
+        // Read and write:
         r = read(uptimeFd, buffer, BUFFER_SIZE);
+        close(uptimeFd);
+        if (r <= 0) {
+            printf("ERROR with reading /proc/uptime. -> See next line for error-message:\n");
+            perror("read");
+            return -1;
+        }
+        write(logFd, buffer, r);
+        printf("logged: %s\n", buffer);
+        sleep(1);
     }
 
     // close the files
-    close(uptimeFd);
     close(logFd);
 
     return 0;
