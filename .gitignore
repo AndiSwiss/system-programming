@@ -144,3 +144,4 @@ fabric.properties
 .idea/**/markdown-navigator/
 
 # End of https://www.gitignore.io/api/c,clion
+/src/andiswiss/w01_hands_on/_IMPORTANT.md
