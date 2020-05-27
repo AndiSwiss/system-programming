@@ -43,4 +43,4 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/w01_first_steps_in_c/my_args.c
         src/andiswiss/w01_first_steps_in_c/my_tree.c
         src/andiswiss/w02_functions/swap.c
-        src/andiswiss/w02_functions/linked_example/linked_main.c src/andiswiss/w02_functions/linked_example/linked_f.c)
+        src/andiswiss/w02_functions/linked_example/linked_main.c src/andiswiss/w02_functions/linked_example/linked_f.c src/andiswiss/w02_functions/my_struct_v2.c)

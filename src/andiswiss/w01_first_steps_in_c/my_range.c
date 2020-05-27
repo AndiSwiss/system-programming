@@ -35,7 +35,7 @@ int main(void) {
         ui++;
     }
     printf("unsigned: %d, %d\n", ui, uj);   // stops at ui = 0, uj = -1  ???
-
+    return 0;
 }
 
 

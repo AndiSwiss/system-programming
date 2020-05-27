@@ -101,8 +101,7 @@ int main(void) {
     // Not possible anymore:
 //    printf("childL (after free): %s\n", root->left->label);
 
-
-
+    return 0;
 }
 
 // print out some children:
