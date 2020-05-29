@@ -62,12 +62,6 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/w03_file_io/stdio_buf.c
         src/andiswiss/w03_file_io/tmp_file.c
         src/andiswiss/w03_file_io/my_write_bytes.c
-        src/andiswiss/lib/tlpi_hdr.h
-        src/andiswiss/lib/get_num.h
-        src/andiswiss/lib/get_num.c
-        src/andiswiss/lib/error_functions.h
-        src/andiswiss/lib/error_functions.c
-        src/andiswiss/lib/ename.c.inc
         src/andiswiss/w04_processes_and_signals/my_malloc.c
         src/andiswiss/w11_time_measurement/strtime.c
         )
