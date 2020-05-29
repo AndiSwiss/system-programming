@@ -1,4 +1,4 @@
-# Installation process
+# tlpi-book -- Installation process
 
 I (AndiSwiss) did follow the following steps in order to 
 get tlpi-book to work:

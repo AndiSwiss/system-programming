@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(FHNW_syspr_system_programming
         src/andiswiss/w00_introduction/w00a_hello_world.c
-        src/andiswiss/makefile
         src/libs/my_stdlib.c
         src/mikenoethiger/libs/my_stdlib.c
         src/mikenoethiger/echo-client.c
@@ -63,5 +62,6 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/w03_file_io/tmp_file.c
         src/andiswiss/w03_file_io/my_write_bytes.c
         src/andiswiss/w04_processes_and_signals/my_malloc.c
+        src/andiswiss/w04_processes_and_signals/makefile
         src/andiswiss/w11_time_measurement/strtime.c
         )
