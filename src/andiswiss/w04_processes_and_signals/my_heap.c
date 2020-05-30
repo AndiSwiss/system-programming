@@ -1,6 +1,6 @@
 //
-// Created by tamberg
-// extended by AndiSwiss
+// Based on https://github.com/tamberg/fhnw-syspr/blob/master/04/heap.c
+// Extended by AndiSwiss
 //
 
 
@@ -8,13 +8,13 @@
 #include <stdlib.h>
 #include <errno.h>
 
-#define N 33359
+#define N 600000000
 // NOTE 1: A lower number than 33359 results in throwing NO error - so the 'free(p0)' is not working then as expected!!
 //      If the number is 33359 or higher, then the "Segmentation fault" error is thrown as expected.
 //      Most likely this is based on the same effect, if you use ../src/andiswiss/tlpi-book/memalloc/free_and_sbrk.c
 //      with low values: then the program-break also doesn't move!
 //
-// NOTE 2: A higher number than 530000000 would result in (also try yourself):
+// NOTE 2: A higher number than something around 600000000 would result in (also try yourself):
 //      Error 12
 //      malloc: Cannot allocate memory
 //      And later when trying to access those memory slots:  "Segmentation fault"
