@@ -1,5 +1,5 @@
 //
-// Created by Andreas Ambühl on 26.05.20.
+// Created by AndiSwiss on 26.05.20.
 //
 #include <stdio.h>
 #include <stdlib.h>   // needed for the malloc(...)!!

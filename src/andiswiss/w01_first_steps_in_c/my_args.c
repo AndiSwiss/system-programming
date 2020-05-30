@@ -1,5 +1,5 @@
 //
-// Created by Andreas Ambühl on 26.05.20.
+// Created by AndiSwiss on 26.05.20.
 //
 
 // see https://github.com/fhnw-syspr-4ibb2/fhnw-syspr-work-01-AndiSwiss

@@ -64,4 +64,4 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/w04_processes_and_signals/my_malloc.c
         src/andiswiss/w04_processes_and_signals/makefile
         src/andiswiss/w11_time_measurement/strtime.c
-        )
+        src/andiswiss/w04_processes_and_signals/various.c src/andiswiss/w04_processes_and_signals/segments.c src/andiswiss/w04_processes_and_signals/args.c src/andiswiss/w04_processes_and_signals/environ.c src/andiswiss/w04_processes_and_signals/heap.c)
