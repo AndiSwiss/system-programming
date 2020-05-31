@@ -53,9 +53,14 @@ int main(void) {
 //
 // NOTE: When compiling, a warning will appear. But the application should nevertheless work.
 //
-// NOTE 2: For some strange reasons, 'cd ..' or 'cd out'  or any cd command doesn't work ???
-//     On the other hand, all the following commands work flawless, like:
+// NOTE 2: Most commands work like a charm:
 //     ls -la
 //     apt-get install nano
 //     nano my_system.c
-//
+// Some commands might have a slightly special behaviour:
+// e.g. 'cd bye'  actually does work and would change to the folder 'bye', but a
+// when executing later on ls, you are back in the previous working directly.
+// But when executing e.g. 'cd bye && ls'  -> then you see, that cd worked correctly!
+// Also try to compile an app, change the directory and run that app:
+//     make my_fork && cd out && ./my_fork
+// -> Works very nicely :-)
