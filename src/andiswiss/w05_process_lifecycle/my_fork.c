@@ -37,3 +37,4 @@ int main(int argc, char *argv[]) {
 //
 // run with:
 // make my_fork && ./out/my_fork
+// -> will print  <defunkt>  (in comparison, run the same with my_fork: there, it's not a zombie!  (though you have to be quick!)
