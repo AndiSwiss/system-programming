@@ -4,11 +4,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
 
-
-
-int main(void) {
+int main(int argc, char *argv[]) {
     int pid, pid_p, pid_c;
 
     pid = fork();
@@ -17,12 +16,24 @@ int main(void) {
         pid = getpid();
         pid_p = getppid();
         printf("I'm child pid=%d of parent pid_p=%d\n", pid, pid_p);
+        sleep(1);
         exit(1);
     } else {
         // I'm the parent:
         pid_c = pid;
         pid = getpid();
-        printf("I'm parent pid=%d of child pid_c=%d\n", pid, pid_c);
+        printf("\nI'm parent pid=%d of child pid_c=%d\n", pid, pid_c);
+        // additions as seen from tamberg:
+        int status;
+        wait(&status);
+        printf("\nDone waiting for child, status %d\n", WEXITSTATUS(status));
+        sleep(1);
+        printf("\n");
     }
     return 0;
 }
+
+// NOTE: most of the times, parent prints its statement first, but sometimes, child is first!
+//
+// run with:
+// make my_fork && ./out/my_fork
