@@ -14,9 +14,7 @@
 #include <stdlib.h>
 
 
-int main(void) {
-    char input[100] = "0";
-
+void getInput(char *input) {
     printf("\n\n\n---\nEnter a cmd-command you want to be executed (for terminating the app, enter 0):\n");
 
     // COOL: with scanf, you can read multiple arguments, even with different formats.
@@ -30,22 +28,34 @@ int main(void) {
 
     // But for reading a full line, you can use something like:
     gets(input);
+}
+
+int main(void) {
+    char input[100] = "0";
+
+    getInput(input);
 
     while (input[0] != '0' && input[0] != 'O') {
         printf("\nNow executing your command: %s\n", input);
-
         system(input);
 
-        printf("\n---\nEnter a cmd-command you want to be executed (for terminating the app, enter 0):\n");
-        gets(input);
+        // read another line
+        getInput(input);
     }
     printf("Ending the application.\n");
     return 0;
 }
 
 
-// NOTE: when compiling, a warning will appear. But the application should nevertheless work.
-//
 // run with:
 // make my_system && ./out/my_system
-
+//
+//
+// NOTE: When compiling, a warning will appear. But the application should nevertheless work.
+//
+// NOTE 2: For some strange reasons, 'cd ..' or 'cd out'  or any cd command doesn't work ???
+//     On the other hand, all the following commands work flawless, like:
+//     ls -la
+//     apt-get install nano
+//     nano my_system.c
+//
