@@ -86,4 +86,4 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/w06_threads_and_sychronization/math.c
         src/andiswiss/w06_threads_and_sychronization/my_pthreads.c
         src/andiswiss/w06_threads_and_sychronization/eintr.c
-        src/andiswiss/w06_threads_and_sychronization/prod_cons.c)
+        src/andiswiss/w06_threads_and_sychronization/prod_cons.c src/andiswiss/assessment_1_2019_november/a1.c src/andiswiss/assessment_1_2019_november/a2.c src/andiswiss/assessment_1_2019_november/a3.c src/andiswiss/assessment_1_2019_november/a4.c src/andiswiss/assessment_1_2019_november/a5.c)
