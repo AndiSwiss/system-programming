@@ -74,4 +74,16 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/w04_processes_and_signals/pause.c
         src/andiswiss/w05_process_lifecycle/my_fork.c
         src/andiswiss/w05_process_lifecycle/time_stuff.c
-        src/andiswiss/w05_process_lifecycle/fork_signals_sync.c src/andiswiss/w05_process_lifecycle/my_zombie.c src/andiswiss/w05_process_lifecycle/execlp.c src/andiswiss/w05_process_lifecycle/my_system.c src/andiswiss/w06_threads_and_sychronization/about_void_pointers.c src/andiswiss/w06_threads_and_sychronization/pthread_creation_and_termination.c src/andiswiss/w06_threads_and_sychronization/pthread_one_int_arg.c src/andiswiss/w06_threads_and_sychronization/pthread_multiple_args_via_struct.c src/andiswiss/w06_threads_and_sychronization/pthread_join.c src/andiswiss/w06_threads_and_sychronization/math.c src/andiswiss/w06_threads_and_sychronization/my_pthreads.c src/andiswiss/w06_threads_and_sychronization/eintr.c)
+        src/andiswiss/w05_process_lifecycle/fork_signals_sync.c
+        src/andiswiss/w05_process_lifecycle/my_zombie.c
+        src/andiswiss/w05_process_lifecycle/execlp.c
+        src/andiswiss/w05_process_lifecycle/my_system.c
+        src/andiswiss/w06_threads_and_sychronization/about_void_pointers.c
+        src/andiswiss/w06_threads_and_sychronization/pthread_creation_and_termination.c
+        src/andiswiss/w06_threads_and_sychronization/pthread_one_int_arg.c
+        src/andiswiss/w06_threads_and_sychronization/pthread_multiple_args_via_struct.c
+        src/andiswiss/w06_threads_and_sychronization/pthread_join.c
+        src/andiswiss/w06_threads_and_sychronization/math.c
+        src/andiswiss/w06_threads_and_sychronization/my_pthreads.c
+        src/andiswiss/w06_threads_and_sychronization/eintr.c
+        src/andiswiss/w06_threads_and_sychronization/prod_cons.c)
