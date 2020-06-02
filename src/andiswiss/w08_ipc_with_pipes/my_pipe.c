@@ -6,9 +6,27 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
+
 #define BUF_SIZE 10
 
 
+/// Version for reading the pipe, if you ALREADY KNOW, how many bytes, you will expect:
+void readingV1(int *pfd) {
+    char received[5];
+    read(pfd[0], received, 5);
+    printf("\nGetting the following message from child: %s\n\n", received);
+}
+
+/// Dynamic version, if you DON't know, how many bytes you would get (adapted from sample solution):
+void readingV2(int *pfd) {
+    char title[] = "\nGetting the following message from child: ";
+    write(STDOUT_FILENO, title, sizeof(title) / sizeof(title[0]));
+    char received[1];
+    while (read(pfd[0], received, 1) == 1) {
+        write(STDOUT_FILENO, received, 1);
+    }
+    write(STDOUT_FILENO, "\n\n", 2);
+}
 
 
 int main(void) {
@@ -41,26 +59,14 @@ int main(void) {
             // Parent:
             close(pfd[1]);
 
-            /// VERSION, IF YOU KNOW, how many bytes, you will expect:
-//            char received[5];
-//            read(pfd[0], received, 5);
-//            printf("\nGetting the following message from child: %s\n", received);
-
-
-            /// Dynamic version, if yo DON't know, how many bytes you would get (adapted from sample solution):
-            char title[] = "\nGetting the following message from child: ";
-            write(STDOUT_FILENO, title, sizeof(title) / sizeof(title[0]));
-            char received[1];
-            while (read(pfd[0], received, 1) == 1) {
-                write(STDOUT_FILENO, received, 1);
-            }
-            write(STDOUT_FILENO, "\n", 1);
+            // Choose your preferred method:
+//            readingV1(pfd);
+            readingV2(pfd);
 
 
             close(pfd[1]);
             exit(0);
     }
-
 }
 
 // run with:
