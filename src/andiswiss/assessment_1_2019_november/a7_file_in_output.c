@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <fcntl.h>    // needed for open(...)
 #include <unistd.h>   // needed for close(...) and more
+#include <string.h>
 
 #define BUFFER_SIZE 1024
 
@@ -22,8 +23,6 @@ int main(int argc, char *argv[]) {
 
     char *src = argv[1], *target = argv[2];
 
-    printf("my_copy called with src=%s, target=%s\n", src, target);
-
     // Open source file
     int srcFd = open(src, O_RDONLY);
     if (srcFd == -1) {
@@ -33,7 +32,9 @@ int main(int argc, char *argv[]) {
     }
 
     // Open target file
-    int targetFd = open(target, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+    int targetFd = open(target, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+    // NOTE: the O_TRUNC-flag erases any previously existing content!
+
     if (targetFd == -1) {
         printf("ERROR with target-file: %s  -> see next line for error-message:\n", target);
         perror("open");
@@ -49,7 +50,7 @@ int main(int argc, char *argv[]) {
 
     if (r < BUFFER_SIZE) {
         int pos = 0;
-        char *add[] = {", Legs\n", ", 4\n", ", 2\n", ", 4\n", ", 4\n"};
+        char *add[] = {"Legs", "4", "2", "4", "4"};
 
         // go through all the lines:
         for (int i = 0; i < 5; ++i) {
@@ -63,8 +64,9 @@ int main(int argc, char *argv[]) {
             write(targetFd, &buffer[pos - len], len);
 
             // add new content of that line:
-            int amount = i == 0 ? 7 : 4;
-            write(targetFd, add[i], amount);
+            write(targetFd, ", ", 2);
+            write(targetFd, add[i], strlen(add[i]));
+            write(targetFd, "\n", 1);
 
             // Advance position to the next line:
             pos++;
