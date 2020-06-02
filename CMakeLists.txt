@@ -94,4 +94,4 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/assessment_1_2019_november/a5_eval_passing_a_function_into_a_function.c
         src/andiswiss/assessment_1_2019_november/a6_sort_a_list_of_nodes.c
         src/andiswiss/assessment_1_2019_november/a7_file_in_output.c
-        src/andiswiss/assessment_1_2019_november/a7_file_in_output_v2.c src/andiswiss/w06_threads_and_sychronization/prodcons0.c src/andiswiss/w06_threads_and_sychronization/prodcons1.c src/andiswiss/w06_threads_and_sychronization/prodcons2.c src/andiswiss/w06_threads_and_sychronization/prodcons3.c)
+        src/andiswiss/assessment_1_2019_november/a7_file_in_output_v2.c src/andiswiss/w06_threads_and_sychronization/prodcons0.c src/andiswiss/w06_threads_and_sychronization/prodcons1.c src/andiswiss/w06_threads_and_sychronization/prodcons2.c src/andiswiss/w06_threads_and_sychronization/prodcons3.c src/andiswiss/w08_ipc_with_pipes/my_pipe.c)
