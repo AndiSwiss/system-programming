@@ -47,6 +47,7 @@ int main(void) {
             return errno;
         case 0:
             // Child, reading data:
+            // Immediately close the read-end of the pipe (the one end, you're not going to use):
             close(pfd[0]);
             char message[] = "hello";
             size_t size = sizeof(message) / sizeof(message[0]);
@@ -57,6 +58,7 @@ int main(void) {
             exit(0);
         default:
             // Parent:
+            // Immediately close the write-end of the pipe (the one end, you're not going to use):
             close(pfd[1]);
 
             // Choose your preferred method:
