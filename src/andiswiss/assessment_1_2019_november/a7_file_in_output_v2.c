@@ -53,31 +53,28 @@ int main(int argc, char *argv[]) {
     // Writing the data
     if (r < BUFFER_SIZE) {
         int pos = 0;
-        char *add[] = {"Legs", "4", "2", "4", "4"};
+        char *add[] = {"Legs", "4", "2", "4", "4", "7"};
+        int line = 0;
 
-        // go through all the lines:
-        for (int i = 0; i < 5; ++i) {
-            // get length of current line:
-            int len = 0;
+        // go through the whole file
+        while (pos < r) {
+            // write a whole line, char by char:
             while (buffer[pos] != '\n') {
+                write(targetFd, &buffer[pos], 1);
                 pos++;
-                len++;
             }
-            // write original content of one line:
-            write(targetFd, &buffer[pos - len], len);
-
             // add new content of that line:
             write(targetFd, ", ", 2);
-            write(targetFd, add[i], strlen(add[i]));
+            write(targetFd, add[line], strlen(add[line]));
             write(targetFd, "\n", 1);
 
-            // Advance position to the next line:
+            // advance positions:
             pos++;
+            line++;
         }
     } else {
-        printf("read bytes %d is larger than BUFFER_SIZE = %d -> need a different strategy!\n", r, BUFFER_SIZE);
+        printf("Read bytes r = %d is larger than BUFFER_SIZE = %d -> need a different strategy!\n", r, BUFFER_SIZE);
     }
-
 
 
     // Close the files
@@ -96,3 +93,5 @@ int main(int argc, char *argv[]) {
 
 // run with:
 //  make a7_file_in_output_v2 && ./out/a7_file_in_output_v2 table.csv table2.csv
+
+// TODO: why in the whole world does it add another comma at the last line ?!?!?
