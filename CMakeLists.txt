@@ -86,4 +86,4 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/w06_threads_and_sychronization/math.c
         src/andiswiss/w06_threads_and_sychronization/my_pthreads.c
         src/andiswiss/w06_threads_and_sychronization/eintr.c
-        src/andiswiss/w06_threads_and_sychronization/prod_cons.c src/andiswiss/assessment_1_2019_november/a1.c src/andiswiss/assessment_1_2019_november/a2.c src/andiswiss/assessment_1_2019_november/a3.c src/andiswiss/assessment_1_2019_november/a4.c src/andiswiss/assessment_1_2019_november/a5.c)
+        src/andiswiss/w06_threads_and_sychronization/prod_cons.c src/andiswiss/assessment_1_2019_november/a1_which_compile.c src/andiswiss/assessment_1_2019_november/a2_difference_between_variables.c src/andiswiss/assessment_1_2019_november/a3_function_reverse_a_string.c src/andiswiss/assessment_1_2019_november/a4_passing_array_pointer_into_function.c src/andiswiss/assessment_1_2019_november/a5_eval_passing_a_function_into_a_function.c src/andiswiss/assessment_1_2019_november/a6_sort_a_list_of_nodes.c src/andiswiss/assessment_1_2019_november/a7_file_in_output.c)

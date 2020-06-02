@@ -54,4 +54,4 @@ int main(int argc, char *argv[]) {
 
 
 // run with something like
-//  make a3 && ./out/a3 This is just a test.
+//  make a3_function_reverse_a_string && ./out/a3_function_reverse_a_string This is just a test.

@@ -37,4 +37,4 @@ int main(void) {
 
 
 // run with:
-//  make a4 && ./out/a4
+//  make a4_passing_array_pointer_into_function && ./out/a4_passing_array_pointer_into_function

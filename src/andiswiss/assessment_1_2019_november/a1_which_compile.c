@@ -53,4 +53,4 @@ int main(void) {
 }
 
 // run with:
-//  make a1 && ./out/a1
+//  make a1_which_compile && ./out/a1_which_compile

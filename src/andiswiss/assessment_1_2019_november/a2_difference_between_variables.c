@@ -25,4 +25,4 @@ int main(void) {
 
 
 // run with:
-//  make a2 && ./out/a2
+//  make a2_difference_between_variables && ./out/a2_difference_between_variables

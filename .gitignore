@@ -150,3 +150,4 @@ fabric.properties
 # The whole tlpi-book section (from http://man7.org/tlpi/code/download/\ tlpi-180725-book.tar.gz)
 /src/andiswiss/tlpi-book/
 /src/andiswiss/NOTE_REGARDING_HANDS_ON.md
+/src/andiswiss/assessment_1_2019_november/table2.csv
