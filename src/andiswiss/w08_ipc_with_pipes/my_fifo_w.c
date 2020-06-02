@@ -9,6 +9,9 @@
 #include <fcntl.h>      // needed for flags like O_RDONLY
 #include <errno.h>
 
+void writeMessage() {
+
+}
 
 int main(void) {
     char *file = "tmp_fifo";
@@ -22,12 +25,20 @@ int main(void) {
     }
 
 
-    // Write a message to the file:
-    char buf[] = "Hello, my name is Andi\n";
-    size_t size = sizeof(buf) / sizeof(buf[0]);
+    // Write two messages to the file:
+    char msg1[] = "Hello, my name is Andi. I want to tell you a little story...\n";
+    size_t size = sizeof(msg1) / sizeof(msg1[0]);
+    ssize_t w1 = write(fd, msg1, size);
+    if (w1 == -1) {
+        printf("error with write: %d\n", errno);
+        perror("write");
+        exit(-1);
+    }
 
-    ssize_t w = write(fd, buf, size);
-    if (w == -1) {
+    char msg2[] = "Well, think of a story yourself; I already had to be creative for composing this code :-)\n";
+    size = sizeof(msg2) / sizeof(msg2[0]);
+    ssize_t w2 = write(fd, msg2, size);
+    if (w2 == -1) {
         printf("error with write: %d\n", errno);
         perror("write");
         exit(-1);
@@ -40,7 +51,7 @@ int main(void) {
         exit(-1);
     }
 
-    printf("Sending seemed to be successful. Sent %zd bytes.\n", w);
+    printf("Sending seemed to be successful. Sent %zd bytes.\n", w1 + w2);
 
 
     return 0;

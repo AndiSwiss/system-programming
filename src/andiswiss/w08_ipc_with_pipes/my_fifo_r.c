@@ -10,8 +10,7 @@
 #include <fcntl.h>     // needed for flags like O_RDONLY
 #include <errno.h>
 
-#define BUF_SIZE 1024
-
+#define BUF_SIZE 16
 
 
 int main(void) {
@@ -39,7 +38,7 @@ int main(void) {
         exit(-1);
     }
 
-    printf("Reading from other process...\n");
+    printf("Receiving message:\n");
     // Read from the file
     char buf[BUF_SIZE];
     ssize_t r = read(fd, buf, BUF_SIZE);
@@ -49,8 +48,24 @@ int main(void) {
         exit(-1);
     }
 
-    printf("Received message:\n");
-    printf("%s\n", buf);             // Note: in sample solution, this output is done char by char!
+    while (r != 0) {
+//        printf("%s", buf);
+        // Note: This simple solution of just printing the buffer as a string, doesn't work nice on longer messages:
+        // When exceeding the buffer size, it prints funny things after the defined BUF_SIZE (here: 16), such as:
+        // Hello, my name iP�T��s Andi. I want tP�T��o tell you a litP�T��tle story...
+        //
+        // Better: print char by char:
+        for (int i = 0; i < r; ++i) {
+            printf("%c", buf[i]);
+        }
+
+        r = read(fd, buf, BUF_SIZE);
+        if (r == -1) {
+            printf("error with read: %d\n", errno);
+            perror("read");
+            exit(-1);
+        }
+    }
 
     // Close the file (maybe not needed, e.g. this is not present in the sample solution)
     if (close(fd) == -1) {
