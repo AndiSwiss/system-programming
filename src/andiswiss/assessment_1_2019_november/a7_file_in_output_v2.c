@@ -11,8 +11,8 @@
 #include <stdio.h>
 #include <fcntl.h>    // needed for open(...)
 #include <unistd.h>   // needed for close(...) and more
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define BUFFER_SIZE 1024
 
@@ -80,7 +80,7 @@ int main(int argc, char *argv[]) {
 
 
 
-    // close the files
+    // Close the files
     close(srcFd);
     close(targetFd);
 
@@ -90,10 +90,9 @@ int main(int argc, char *argv[]) {
     strcat(command, argv[2]);
     system(command);
 
-
     return 0;
 }
 
 
 // run with:
-//  make a7_file_in_output && ./out/a7_file_in_output table.csv table2.csv
+//  make a7_file_in_output_v2 && ./out/a7_file_in_output_v2 table.csv table2.csv

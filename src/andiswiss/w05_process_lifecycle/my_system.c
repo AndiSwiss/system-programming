@@ -33,6 +33,8 @@ void getInput(char *input) {
 int main(void) {
     char input[100] = "0";
 
+    system("ls");
+
     getInput(input);
 
     while (input[0] != '0' && input[0] != 'O') {
