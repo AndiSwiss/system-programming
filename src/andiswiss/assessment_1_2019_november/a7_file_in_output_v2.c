@@ -93,5 +93,3 @@ int main(int argc, char *argv[]) {
 
 // run with:
 //  make a7_file_in_output_v2 && ./out/a7_file_in_output_v2 table.csv table2.csv
-
-// TODO: why in the whole world does it add another comma at the last line ?!?!?
