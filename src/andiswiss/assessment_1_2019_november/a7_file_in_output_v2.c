@@ -53,8 +53,8 @@ int main(int argc, char *argv[]) {
     // Writing the data
     if (r < BUFFER_SIZE) {
         int pos = 0;
-        char *add[] = {"Legs", "4", "2", "4", "4", "7"};
-        int line = 0;
+        char *add = {"Legs\n4\n2\n4\n4\n7"};
+        int addPos = 0;
 
         // go through the whole file
         while (pos < r) {
@@ -63,14 +63,17 @@ int main(int argc, char *argv[]) {
                 write(targetFd, &buffer[pos], 1);
                 pos++;
             }
-            // add new content of that line:
+            // add new content of that line, char by char:
             write(targetFd, ", ", 2);
-            write(targetFd, add[line], strlen(add[line]));
+            while (add[addPos] != '\n') {
+                write(targetFd, &add[addPos], 1);
+                addPos++;
+            }
             write(targetFd, "\n", 1);
 
             // advance positions:
             pos++;
-            line++;
+            addPos++;
         }
     } else {
         printf("Read bytes r = %d is larger than BUFFER_SIZE = %d -> need a different strategy!\n", r, BUFFER_SIZE);
@@ -93,3 +96,6 @@ int main(int argc, char *argv[]) {
 
 // run with:
 //  make a7_file_in_output_v2 && ./out/a7_file_in_output_v2 table.csv table2.csv
+//
+// NOTE: the whole breaks heavily, if you forget to have a \n at the end of table.csv
+// (just try it out, maybe a couple of times and then look at table2.csv)
