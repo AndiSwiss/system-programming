@@ -56,6 +56,12 @@ Run `exit` when connected to the container to terminate the session.
 If you want to have multiple terminals to the same docker, you can easily do that like this: Open a new terminal window and type:
 ```
 docker exec -it syspr /bin/bash
+
+# Or do once:
+chmod u+x docker-second-connection.sh
+
+# Then simply:
+./docker-second-connection.sh
 ```
 This is particularly helpful for the examples like `../src/mikenoethiker/fifo1.c` and `fifo2.c`.
 

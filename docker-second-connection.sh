@@ -1,0 +1,1 @@
+docker exec -it syspr /bin/bash
