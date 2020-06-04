@@ -108,4 +108,4 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/w09_sockets/tut_server.c
         src/andiswiss/w09_sockets/tut_server_multi.c
         src/andiswiss/w09_sockets/tut_client.c
-        src/andiswiss/assessment_1_2019_november/a8_zombie_process.c src/andiswiss/assessment_1_2019_november/a9_sigchild.c src/andiswiss/assessment_1_2019_november/a10_process_lifecycle.c src/andiswiss/assessment_1_2019_november/a11_threads_and_synchronization.c)
+        src/andiswiss/assessment_1_2019_november/a8_zombie_process.c src/andiswiss/assessment_1_2019_november/a9_sigchild.c src/andiswiss/assessment_1_2019_november/a10_process_lifecycle.c src/andiswiss/assessment_1_2019_november/a11_threads_and_synchronization.c src/andiswiss/w11_time_measurement/pthread_example.c)
