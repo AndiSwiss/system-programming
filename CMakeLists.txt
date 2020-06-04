@@ -94,4 +94,18 @@ add_executable(FHNW_syspr_system_programming
         src/andiswiss/assessment_1_2019_november/a5_eval_passing_a_function_into_a_function.c
         src/andiswiss/assessment_1_2019_november/a6_sort_a_list_of_nodes.c
         src/andiswiss/assessment_1_2019_november/a7_file_in_output.c
-        src/andiswiss/assessment_1_2019_november/a7_file_in_output_v2.c src/andiswiss/w06_threads_and_sychronization/prodcons0.c src/andiswiss/w06_threads_and_sychronization/prodcons1.c src/andiswiss/w06_threads_and_sychronization/prodcons2.c src/andiswiss/w06_threads_and_sychronization/prodcons3.c src/andiswiss/w08_ipc_with_pipes/my_pipe.c src/andiswiss/w08_ipc_with_pipes/my_fifo_r.c src/andiswiss/w08_ipc_with_pipes/my_fifo_w.c src/andiswiss/w09_sockets/http_client.c src/andiswiss/w09_sockets/http_server.c src/andiswiss/w09_sockets/tut_byteorder.c src/andiswiss/w09_sockets/tut_server.c src/andiswiss/w09_sockets/tut_server_multi.c src/andiswiss/w09_sockets/tut_client.c)
+        src/andiswiss/assessment_1_2019_november/a7_file_in_output_v2.c
+        src/andiswiss/w06_threads_and_sychronization/prodcons0.c
+        src/andiswiss/w06_threads_and_sychronization/prodcons1.c
+        src/andiswiss/w06_threads_and_sychronization/prodcons2.c
+        src/andiswiss/w06_threads_and_sychronization/prodcons3.c
+        src/andiswiss/w08_ipc_with_pipes/my_pipe.c
+        src/andiswiss/w08_ipc_with_pipes/my_fifo_r.c
+        src/andiswiss/w08_ipc_with_pipes/my_fifo_w.c
+        src/andiswiss/w09_sockets/http_client.c
+        src/andiswiss/w09_sockets/http_server.c
+        src/andiswiss/w09_sockets/tut_byteorder.c
+        src/andiswiss/w09_sockets/tut_server.c
+        src/andiswiss/w09_sockets/tut_server_multi.c
+        src/andiswiss/w09_sockets/tut_client.c
+        src/andiswiss/assessment_1_2019_november/a8_zombie_process.c src/andiswiss/assessment_1_2019_november/a9_sigchild.c src/andiswiss/assessment_1_2019_november/a10_process_lifecycle.c src/andiswiss/assessment_1_2019_november/a11_threads_and_synchronization.c)

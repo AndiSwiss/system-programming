@@ -1,3 +1,11 @@
+# Fork
+Note: This is a fork from https://github.com/mikenoethiger/system-programming.
+
+All original code from the forked project from mikenoethiger is in `../src/mikenoethiger.`
+
+The folder `../src/notes` has the original notes from mikenoethiger.
+
+
 # About
 
 This is a collection of C programs, notes and exams that aggregated during the system programming lectures.

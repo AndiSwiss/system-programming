@@ -11,3 +11,7 @@ Review the 'hands-on' as described in https://github.com/tamberg/fhnw-syspr/blob
 - Slide 27: Hands-on 'Semaphore'
 - Slide 40: Hands-on 'Shared Memory'
 
+Don't forget: the tlpi-book and all its example files are installed in this project, see 
+`src/andiswiss/tlpi-book/README_AA.md`.
+
+
