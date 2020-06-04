@@ -1,9 +1,29 @@
 //
-//
+// Initial version by tamberg
+// Additional printf() and EXPLANATION by andiswiss
 //
 
 
-/// -> for a possible solution, see file `../exams/assessment1.pdf`
+/**
+ * EXPLANATION:
+ *
+ * Prints:
+ * B    -> This is printed right at the beginning before anything else happens
+ * C    -> See slide 17 of Syspr06ThreadsUndSynchronisation.pdf:
+ *          A 'mutex' protects access to shared resources (mutex = 'mutual exclusion').
+ *          Condition variables enable threads to inform each other about changes of a shared resource.
+ *          For correct sequence, see slide 21.
+ *          Slide 25: A condition variable is always used together with a mutex, which protects the variable.
+ *          Slide 27: in pthread_cond_wait, the mutex is UNLOCKED and the thread is suspended until the condition variable
+ *             changes. After that, the mutex is LOCKED again
+ *          Slide 28: pthread_cond_signal(&c);    -> signal 1 waiting thread
+ *                    pthread_cond_broadcast(&c); -> signal all waiting threads
+ * A    -> Once the main() unlocks the mutex, function start() can continue -> happens in pthread_cond_wait(..)!!!
+ * D    -> With pthread_cond_wait(&c, &m); -> as soon as function start() sends the unlock, main() COULD continue, but
+ *         it seems that it has to wait for start() to unlock the mutex, so that pthread_cond_wait() can again lock the
+ *         the mutex and main() can continue and print "D"
+ */
+
 
 #include <stdio.h>
 #include <pthread.h>
@@ -37,21 +57,3 @@ int main(void) {
     printf("D\n");
     pthread_mutex_unlock(&m);
 }
-
-/**
- * Prints:
- * B    -> This is printed right at the beginning before anything else happens
- * C    -> See slide 17 of Syspr06ThreadsUndSynchronisation.pdf:
- *          A 'mutex' protects access to shared resources (mutex = 'mutual exclusion').
- *          Condition variables enable threads to inform each other about changes of a shared resource.
- *          For correct sequence, see slide 21.
- *          Slide 25: A condition variable is always used together with a mutex, which protects the variable.
- *          Slide 27: in pthread_cond_wait, the mutex is UNLOCKED and the thread is suspended until the condition variable
- *             changes. After that, the mutex is LOCKED again
- *          Slide 28: pthread_cond_signal(&c);    -> signal 1 waiting thread
- *                    pthread_cond_broadcast(&c); -> signal all waiting threads
- * A    -> Once the main() unlocks the mutex, function start() can continue -> happens in pthread_cond_wait(..)!!!
- * D    -> With pthread_cond_wait(&c, &m); -> as soon as function start() sends the unlock, main() COULD continue, but
- *         it seems that it has to wait for start() to unlock the mutex, so that pthread_cond_wait() can again lock the
- *         the mutex and main() can continue and print "D"
- */
